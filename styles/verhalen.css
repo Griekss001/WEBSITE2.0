@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+	font-family: "dfds-bold";
+	src: url("../webfonts/dfds-fonts/dfds-bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "dfds-light";
+	src: url("../webfonts/dfds-fonts/dfds-light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "lucida-grande";
+	src: url("../webfonts/dfds-fonts/LucidaGrande.ttf") format("truetype");
+}
+
+/*header*/
+body {
+	background-color: rgb(238, 240, 241);
+}
+h1 {
+	display: none;
+}
+[href="index.html"]{
+	text-decoration:none;
+}
+[src="img/logo.png"] {
+	height:100%;
+	margin-left:2rem;
+	align-content:center;
+}
+
+[alt="zoekicon"] {
+	margin-right:2rem;
+
+}
+header {
+	background-color: white;
+	margin-top: 2em;
+	height: 3em;
+	font-family: "dfds-bold";
+
+}
+.desktopnav {
+	display: none;
+vertical-align: middle;
+}
+.mobielnav {
+	position: absolute;
+	right: 0;
+	top: 2.8em;
+}
+.mobielnav img {
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+/*kader background-color:white;*/
+
+h2{
+	color: rgb(00, 43, 69);
+	font-family: dfds-bold;
+	font-size: 1.2em;
+	padding-top: 1.4em;
+	margin-left: 1.4em;
+}
+footer{
+		font-family: dfds-light;
+	font-size: 0.7em;
+	margin-left: 2.45em;
+	line-height: 3em;
+}
+section{
+	background-color:white;
+	margin:2rem;
+	
+}
+/*img*/
+[src="verhalen/zoonbrowser.jpg"],[src="verhalen/alzheimerbrowser.jpg"],[src="verhalen/sportcommentaarbrowser.jpg"] {
+	display:none;
+}
+
+[src="verhalen/zoonmobiel.jpg"],[src="verhalen/alzheimermobiel.jpg"],[src="verhalen/sportcommentaarmobiel.jpg"]{
+	width:100%;
+}
+
+
+	
+@media(min-width:40em){
+	/*header*/
+header {
+	height: 4.4rem;
+	background-image: none;
+}
+h1 {
+	color: rgb(00, 43, 69);
+	font-family: dfds-bold;
+	font-size: 2.3em;
+	display:inline-block;
+	vertical-align:middle;
+	margin-top:-3.5rem;
+	
+}
+header>img {
+	display: none;
+}
+
+
+}
+@media(min-width:60em){
+	nav.mobielnav {
+	display: none;
+}
+nav.desktopnav {
+	display: block;
+	float: right;
+	margin-top: 1.5rem;
+	margin-right: 3.3rem;
+}
+/*ZOON*/
+	
+[src="verhalen/zoonmobiel.jpg"],[src="verhalen/alzheimermobiel.jpg"],[src="verhalen/sportcommentaarmobiel.jpg"]{
+	display:none;
+}
+
+[src="verhalen/zoonbrowser.jpg"],[src="verhalen/alzheimerbrowser.jpg"],[src="verhalen/sportcommentaarbrowser.jpg"]{
+	display:block;
+	width:100%;
+}
+
+}
+
+

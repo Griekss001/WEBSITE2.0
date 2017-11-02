@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles2/style.css">
+    <link href="../webfonts/dfds-fonts/fonts.css" rel="stylesheet">
+    <title>DFDSeareading</title>
+</head>
+
+
+<body>
+
+	<header class="header">
+       <a href="index.html"><h1>Seareading</h1></a>
+       
+        <nav>
+            <a href="mijnverhalen.html">Mijn Verhalen</a>
+            <a href="login.html">Log in</a>
+            <input type="text">
+            <button>Zoeken</button>   
+         </nav>
+    </header>
+
+  <main>      
+    <section>
+    
+     <h2> Verhaal 1 en 2</h2>
+     
+      <article>
+       
+        <h2>Aanmelden</h2>
+        
+        <form action="./index.html" method="get">
+        
+            <label for="voornaam">*Voornaam:</label>
+        
+            <input class=invulveld id="voornaam" type="text">
+        
+            <label for="achternaam">*Achternaam:</label>
+            
+            <input class=invulveld id="achternaam" type="password" required>
+            
+            <label for="emailadres">*E-mailadres:</label>
+            
+            <input class=invulveld id="emailadres" type="password" required placeholder="noreply@gmail.com">
+            
+            <label for="wachtwoord">*Wachtwoord:</label>
+        
+            <input class=invulveld id="wachtwoord" type="passwordßß" required> 
+            
+            <label for="bevestigwachtwoord">*Bevestig wachtwoord:</label>
+            
+            <input class=invulveld id="bevestigwachtwoord" type="text" required> 
+            
+            <label for="telefoon">Telefoon:</label>
+        
+            <input class=invulveld id="telefoon" type="tel" required placeholder="+31 612 345 67">
+        
+            <input id="submit" type="submit" value="Inschrijven">
+        
+            <h4>Heb je al een account?</h4>
+            
+            <input id="aanmelden" type="submit" value="Login" onclick="window.location.href='login.html'">
+            
+        </form>
+        
+      </article>
+      
+    </section>        
+  </main>  
+
+</body>
+
+
+</html>

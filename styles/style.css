@@ -1,0 +1,357 @@
+/*
+========================================================
+    Sjoerd Griekspoor - PROJECT WEB
+========================================================
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+========================================================
+    FONTS DFDS 
+========================================================
+*/
+
+@font-face {
+	font-family: "dfds-bold";
+	src: url("../webfonts/dfds-fonts/dfds-bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "dfds-light";
+	src: url("../webfonts/dfds-fonts/dfds-light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "lucida-grande";
+	src: url("../webfonts/dfds-fonts/LucidaGrande.ttf") format("truetype");
+}
+/*
+========================================================
+    BODY
+========================================================
+*/
+
+
+body {
+	background-color: rgb(238, 240, 241);
+}
+/*
+========================================================
+    main
+========================================================
+*/
+
+article {
+	background-color: white;
+	margin: 2em;
+	position: relative;
+}
+/*------------------------------------------------------*/
+/* aside toggle*/
+aside {
+	display: none;
+}
+aside ul li {
+	background-color: grey;
+	margin: 0.3rem;
+	padding: 0.3rem;
+	cursor: pointer;
+}
+aside ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	flex-grow: 2;
+}
+aside.open {
+	display: block;
+	width: 100vw;
+	background-color: white;
+	color: white;
+	font-family: dfds-light;
+}
+button {
+	border: none;
+	background: rgb(246, 134, 31);
+	color: white;
+	width: 100%;
+	padding: 0.5em;
+	margin-top: 1.5em;
+	font-family: dfds-light;
+}
+/*------------------------------------------------------*/
+
+/* lees meer knop */
+
+article a {
+	background-color: rgb(246, 134, 31);
+	color: white;
+	float: right;
+	font-family: dfds-bold;
+	text-transform: uppercase;
+	font-size: 1em;
+	border-style: none;
+	margin-top: -1.5em;
+	display: block;
+	padding-left: 1.25em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-right: 0.3em;
+	clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+/*------------------------------------------------------*/
+
+
+
+
+form > h3 {
+	margin-left: -0.3em;
+	color: rgb(00, 43, 69);
+	font-family: dfds-bold;
+	font-size: 1.5em;
+}
+/* tekst article */
+
+article > p {
+	font-family: dfds-light;
+	color: black;
+	line-height: 1.5em;
+	padding: 1.75em;
+}
+article h2 {
+	color: rgb(00, 43, 69);
+	font-family: dfds-bold;
+	font-size: 1.2em;
+	padding-top: 1.4em;
+	margin-left: 1.4em;
+}
+article > footer {
+	font-family: dfds-light;
+	font-size: 0.7em;
+	margin-left: 2.45em;
+	line-height: 3em;
+}
+/*----------iconen---------------*/
+
+
+section {
+	position: relative;
+}
+section img {
+	height: 1.5em;
+	position: absolute;
+	top: 1.5em;
+}
+section img:first-of-type {
+	right: 6rem;
+}
+section img:nth-of-type(2) {
+	right: 3.5rem;
+}
+section img:nth-of-type(3) {
+	right: 1rem;
+}
+/*----------article image---------------*/
+
+[src="verhalen/zoonthumbnail.jpg"], [src="verhalen/alzheimerthumbnail.jpg"], [src="verhalen/sportcommentaarthumbnail.jpg"] {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0 2rem;
+}
+/*hartje micro interactie*/
+[src="img/like.svg"] {
+	/*hier kun je later een transition invoegen*/
+	cursor: pointer;
+}
+[src="img/like.svg"]:active {
+	top: 1rem;
+	height: 3rem;
+	right: 5.5em;
+}
+/*download micro interactie*/
+
+[src="img/download.svg"] {
+	/*hier kun je later een transition invoegen*/
+	cursor: pointer;
+}
+[src="img/download.svg"]:active {
+	top: 0.9rem;
+	height: 3rem;
+	right: 2.8em;
+}
+[src="img/download.gif"] {
+	display: none;
+}
+[src="img/download.gif"].laden {
+	display: block;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+/*
+========================================================
+    HEADER
+========================================================
+*/
+
+h1 {
+	display: none;
+}
+[href="index.html"] {
+	text-decoration: none;
+}
+[src="img/logo.png"] {
+	height: 100%;
+	margin-left: 2rem;
+	align-content: center;
+}
+[alt="zoekicon"] {
+	margin-right: 2rem;
+}
+header {
+	background-color: white;
+	margin-top: 2em;
+	height: 3em;
+	font-family: "dfds-bold";
+}
+.desktopnav {
+	display: none;
+	vertical-align: middle;
+}
+
+.mobielnav {
+	position: absolute;
+	right: 0;
+	top: 2.8em;
+}
+.mobielnav img {
+	height: 1.5em;
+	vertical-align: middle;
+}
+/*----------------------zoekbalk-------------------------------*/
+header{
+	padding-top:-1em;
+}
+
+header > nav > a {
+	font-family: dfds-light;
+	color: rgb(27, 87, 134);
+	margin-top: 1.5em;
+	margin-right: 2em;
+}
+header > nav > a:hover, header > nav > a:focus {
+	background-color: rgb(130, 188, 229);
+	margin-top: 1.5em;
+}
+header > nav > button {
+	text-transform: uppercase;
+	color: white;
+	background-color: rgb(246, 134, 31);
+	width:10em;
+	height: 
+}
+/*------------------------------------------------------*/
+    
+/*https://stackoverflow.com/questions/30514471/setting-text-color-to-transparent-for-hiding-accessibility-content
+------------------------
+Zorgt ervoor dat het niet zichtbaar is in de browser maar wel voor screenreaders*/
+    
+section > h2 {
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	position: absolute;
+}
+/*------------------------------------------------------*/
+
+/* filter en sorteer button */
+
+form {
+	display: flex;
+	justify-content: flex-end;
+	border-top: solid #EEF0F1 2px;
+	width: 100%;
+	background-color: white;
+	padding: 1rem;
+}
+form > h3 {
+	left: 2.3em;
+	position: absolute;
+}
+form > select {
+	color: white;
+	background-color: #002b45;
+	margin-right: 2.3em;
+}
+
+/*------------------------------------------------------*/
+
+@media (min-width: 40em) {
+main section {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+}
+main > article {
+	margin-top: auto;
+}
+/*header*/
+header {
+	height: 4.4rem;
+	background-image: none;
+}
+h1 {
+	color: rgb(00, 43, 69);
+	font-family: dfds-bold;
+	font-size: 2.3em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -3.5rem;
+}
+header>img {
+	display: none;
+}
+}
+
+@media(min-width:60em) {
+nav.mobielnav {
+	display: none;
+}
+nav.desktopnav {
+	display: block;
+	float: right;
+	margin-top: 1.5rem;
+	margin-right: 3.3rem;
+}
+}
