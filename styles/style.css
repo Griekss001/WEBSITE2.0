@@ -49,6 +49,7 @@ table {
 	font-family: "lucida-grande";
 	src: url("../webfonts/dfds-fonts/LucidaGrande.ttf") format("truetype");
 }
+
 /*
 ========================================================
     BODY
@@ -59,18 +60,111 @@ table {
 body {
 	background-color: rgb(238, 240, 241);
 }
+
+
+
 /*
 ========================================================
-    main
+    HEADER
 ========================================================
 */
 
-article {
+h1 {
+	display: none;
+}
+[href="index.html"] {
+	text-decoration: none;
+}
+[src="img/logo.png"] {
+	height: 100%;
+	margin-left: 2rem;
+	align-content: center;
+}
+[alt="zoekicon"] {
+	margin-right: 2rem;
+}
+header {
 	background-color: white;
-	margin: 2em;
-	position: relative;
+	margin-top: 2em;
+	height: 3em;
+	font-family: "dfds-bold";
+}
+.desktopnav {
+display:none;
+	position:absolute;
+	top:0.3rem;
+	right:0.8rem;
+	
+	
+}
+
+.mobielnav {
+	position: absolute;
+	right: 0;
+	top: 2.8em;
+}
+.mobielnav img {
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+img[src="./img/mijnverhalen.svg"] {
+    background-image: url()
+}
+
+a:link{
+    color: lightgrey;
+}
+
+a:visited{
+    color: rgb(27, 87, 134);
+}
+
+
+/*----------------------zoekbalk-------------------------------*/
+header{
+	padding-top:-1em;
+}
+
+header > nav > a {
+	font-family: dfds-light;
+	color: rgb(27, 87, 134);
+	margin-top: 1.5em;
+	margin-right: 2em;
+}
+header > nav > a:hover, header > nav > a:focus {
+	background-color: rgb(130, 188, 229);
+	margin-top: 1.5em;
+}
+header > nav > button {
+	text-transform: uppercase;
+	color: white;
+	background-color: rgb(246, 134, 31);
+	width:10em;
 }
 /*------------------------------------------------------*/
+
+/* filter en sorteer button */
+
+form {
+	display: flex;
+	justify-content: flex-end;
+	border-top: solid #EEF0F1 2px;
+	width: 100%;
+	background-color: white;
+	padding: 1rem;
+}
+
+form > select {
+	color: white;
+	background-color: #002b45;
+	margin-right: 2.3em;
+}
+
+/*------------------------------------------------------*/
+
+/*------------------------------------------------------*/
+
 /* aside toggle*/
 aside {
 	display: none;
@@ -103,37 +197,13 @@ button {
 	margin-top: 1.5em;
 	font-family: dfds-light;
 }
-/*------------------------------------------------------*/
 
-/* lees meer knop */
+/*
+========================================================
+    main
+========================================================
+*/
 
-article a {
-	background-color: rgb(246, 134, 31);
-	color: white;
-	float: right;
-	font-family: dfds-bold;
-	text-transform: uppercase;
-	font-size: 1em;
-	border-style: none;
-	margin-top: -1.5em;
-	display: block;
-	padding-left: 1.25em;
-	padding-top: 0.25em;
-	padding-bottom: 0.25em;
-	padding-right: 0.3em;
-	clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
-}
-/*------------------------------------------------------*/
-
-
-
-
-form > h3 {
-	margin-left: -0.3em;
-	color: rgb(00, 43, 69);
-	font-family: dfds-bold;
-	font-size: 1.5em;
-}
 /* tekst article */
 
 article > p {
@@ -155,6 +225,59 @@ article > footer {
 	margin-left: 2.45em;
 	line-height: 3em;
 }
+
+article {
+	background-color: white;
+	margin: 2em;
+	position: relative;
+}
+/*------------------------------------------------------*/
+
+
+/* lees meer knop */
+
+article a {
+	background-color: rgb(246, 134, 31);
+	color: white;
+	float: right;
+	font-family: dfds-bold;
+	text-transform: uppercase;
+	font-size: 1em;
+	border-style: none;
+	margin-top: -1.5em;
+	display: block;
+	padding-left: 1.25em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-right: 0.3em;
+	clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+/*------------------------------------------------------*/
+
+    
+/*https://stackoverflow.com/questions/30514471/setting-text-color-to-transparent-for-hiding-accessibility-content
+------------------------
+Zorgt ervoor dat het niet zichtbaar is in de browser maar wel voor screenreaders*/
+    
+section > h2 {
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	position: absolute;
+}
+/*------------------------------------------------------*/
+
+
+
+
+
+
+
 /*----------iconen---------------*/
 
 
@@ -184,138 +307,69 @@ section img:nth-of-type(3) {
 	height: auto;
 	padding: 0 2rem;
 }
+
+/*----------Likeicon opslaan aan mijn verhalen---------------*/
+
+
+img#opslaan {
+    width: 1.5em;
+    height: 1.5em;
+
+    transition: .2s;
+}
+
+img#opslaan.OpslaanZichtbaar{
+    
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: .2s;
+    background-image: url("../img/like2.svg");
+    margin: 0.1rem;
+}
+
+
+/*-------*/
+
+
+
+
 /*hartje micro interactie*/
 [src="img/like.svg"] {
-	/*hier kun je later een transition invoegen*/
 	cursor: pointer;
+    
 }
+
 [src="img/like.svg"]:active {
 	top: 1rem;
 	height: 3rem;
 	right: 5.5em;
 }
+
+
 /*download micro interactie*/
 
 [src="img/download.svg"] {
 	/*hier kun je later een transition invoegen*/
 	cursor: pointer;
+    
 }
+
+
 [src="img/download.svg"]:active {
 	top: 0.9rem;
 	height: 3rem;
 	right: 2.8em;
 }
-[src="img/download.gif"] {
-	display: none;
-}
+
+
 [src="img/download.gif"].laden {
 	display: block;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 }
-/*
-========================================================
-    HEADER
-========================================================
-*/
 
-h1 {
-	display: none;
-}
-[href="index.html"] {
-	text-decoration: none;
-}
-[src="img/logo.png"] {
-	height: 100%;
-	margin-left: 2rem;
-	align-content: center;
-}
-[alt="zoekicon"] {
-	margin-right: 2rem;
-}
-header {
-	background-color: white;
-	margin-top: 2em;
-	height: 3em;
-	font-family: "dfds-bold";
-}
-.desktopnav {
-	display: none;
-	vertical-align: middle;
-}
 
-.mobielnav {
-	position: absolute;
-	right: 0;
-	top: 2.8em;
-}
-.mobielnav img {
-	height: 1.5em;
-	vertical-align: middle;
-}
-/*----------------------zoekbalk-------------------------------*/
-header{
-	padding-top:-1em;
-}
-
-header > nav > a {
-	font-family: dfds-light;
-	color: rgb(27, 87, 134);
-	margin-top: 1.5em;
-	margin-right: 2em;
-}
-header > nav > a:hover, header > nav > a:focus {
-	background-color: rgb(130, 188, 229);
-	margin-top: 1.5em;
-}
-header > nav > button {
-	text-transform: uppercase;
-	color: white;
-	background-color: rgb(246, 134, 31);
-	width:10em;
-	height: 
-}
-/*------------------------------------------------------*/
-    
-/*https://stackoverflow.com/questions/30514471/setting-text-color-to-transparent-for-hiding-accessibility-content
-------------------------
-Zorgt ervoor dat het niet zichtbaar is in de browser maar wel voor screenreaders*/
-    
-section > h2 {
-	border: 0;
-	clip: rect(0 0 0 0);
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	width: 1px;
-	position: absolute;
-}
-/*------------------------------------------------------*/
-
-/* filter en sorteer button */
-
-form {
-	display: flex;
-	justify-content: flex-end;
-	border-top: solid #EEF0F1 2px;
-	width: 100%;
-	background-color: white;
-	padding: 1rem;
-}
-form > h3 {
-	left: 2.3em;
-	position: absolute;
-}
-form > select {
-	color: white;
-	background-color: #002b45;
-	margin-right: 2.3em;
-}
-
-/*------------------------------------------------------*/
 
 @media (min-width: 40em) {
 main section {
@@ -344,7 +398,7 @@ header>img {
 }
 }
 
-@media(min-width:60em) {
+@media(min-width:65em) {
 nav.mobielnav {
 	display: none;
 }

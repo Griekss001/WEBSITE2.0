@@ -142,6 +142,14 @@ nav{
     margin-right: 3.3rem;
 }
 
+a:link{
+    color: lightgrey;
+}
+
+a:visited{
+    color: rgb(27, 87, 134);
+}
+
 
 /*----------------------zoekbalk-------------------------------*/
 
@@ -219,6 +227,20 @@ input >submit{
 label{
     font-family: dfds-light;
     font-size: 1em;
+    
+}
+
+label {  cursor: default;}
+
+input[id="Email"]:invalid, input[id="Password"]:invalid, input[id="voornaam"]:invalid, input[id="achternaam"]:invalid, input[id="emailadres"]:invalid, input[id="wachtwoord"]:invalid, input[id="bevestigwachtwoord"]:invalid, input[id="telefoon"]:invalid {
+    background: rgba(255,0,0,.1);    
+}
+
+label {  cursor: default;}
+
+input[id="Email"]:valid, input[id="Password"]:valid, 
+input[id="voornaam"]:valid, input[id="achternaam"]:valid, input[id="emailadres"]:valid, input[id="wachtwoord"]:valid, input[id="bevestigwachtwoord"]:valid, input[id="telefoon"]:valid {
+    background: rgba(127,255,0,.1);
 }
 
 #submit{
@@ -229,6 +251,24 @@ label{
     margin-top: 2em;
     color: white;
     background-color: rgb(246, 134, 31);
+}
+
+#submit:hover {
+  color: black;
+  background: rgb(27, 87, 134);
+}
+
+#aanmelden:hover {
+  color: black;
+  background: rgb(27, 87, 134);
+}
+
+.invulveld:focus {
+  transform: scale(1.06, 1.06);
+}
+
+.invulveld2:focus {
+  transform: scale(1.06, 1.06);
 }
 
 #aanmelden{
@@ -268,6 +308,23 @@ h4{
         margin-top: auto;
     }
     
+}
+
+header>img {
+	display: none;
+}
+}
+
+@media(min-width:65em) {
+nav.mobielnav {
+	display: none;
+}
+nav.desktopnav {
+	display: block;
+	float: right;
+	margin-top: 1.5rem;
+	margin-right: 3.3rem;
+}
 }
 
 
